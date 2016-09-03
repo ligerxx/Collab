@@ -13,6 +13,8 @@
 		1D7061901D75549500B02B62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D70618F1D75549500B02B62 /* Assets.xcassets */; };
 		1D7061931D75549500B02B62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7061911D75549500B02B62 /* LaunchScreen.storyboard */; };
 		1D70619B1D7560E100B02B62 /* UIFont Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D70619A1D7560E100B02B62 /* UIFont Extension.swift */; };
+		1D9FC54D1D7B78C3002243F1 /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC54C1D7B78C3002243F1 /* UITableViewCellExtension.swift */; };
+		1D9FC54F1D7B7F2C002243F1 /* CBPlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9FC54E1D7B7F2C002243F1 /* CBPlaylistCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1D7061921D75549500B02B62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D7061941D75549500B02B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D70619A1D7560E100B02B62 /* UIFont Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont Extension.swift"; sourceTree = "<group>"; };
+		1D9FC54C1D7B78C3002243F1 /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		1D9FC54E1D7B7F2C002243F1 /* CBPlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CBPlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				1D7061881D75549500B02B62 /* AppDelegate.swift */,
 				1D70618A1D75549500B02B62 /* ViewController.swift */,
 				1D70619A1D7560E100B02B62 /* UIFont Extension.swift */,
+				1D9FC54E1D7B7F2C002243F1 /* CBPlaylistCollectionViewCell.swift */,
+				1D9FC54C1D7B78C3002243F1 /* UITableViewCellExtension.swift */,
 				1D70618C1D75549500B02B62 /* Main.storyboard */,
 				1D70618F1D75549500B02B62 /* Assets.xcassets */,
 				1D7061911D75549500B02B62 /* LaunchScreen.storyboard */,
@@ -142,7 +148,9 @@
 			files = (
 				1D70618B1D75549500B02B62 /* ViewController.swift in Sources */,
 				1D70619B1D7560E100B02B62 /* UIFont Extension.swift in Sources */,
+				1D9FC54F1D7B7F2C002243F1 /* CBPlaylistCollectionViewCell.swift in Sources */,
 				1D7061891D75549500B02B62 /* AppDelegate.swift in Sources */,
+				1D9FC54D1D7B78C3002243F1 /* UITableViewCellExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZSk-qc-mck">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZSk-qc-mck">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,18 +17,82 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <collectionView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0gH-ns-X6n">
+                            <rect key="frame" x="0.0" y="309.5" width="375" height="359"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="8r3-Dc-Poy">
+                                <size key="itemSize" width="160" height="200"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells>
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlaylistCollectionViewCell" id="lLB-JT-eO5" customClass="CBPlaylistCollectionViewCell" customModule="Collab" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="0.0" width="160" height="200"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="art" translatesAutoresizingMaskIntoConstraints="NO" id="6m4-F0-6ax">
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="160" id="d7k-Gm-2Z1"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jpark" translatesAutoresizingMaskIntoConstraints="NO" id="1ts-cX-5PG">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="1ts-cX-5PG" secondAttribute="height" multiplier="1:1" id="yh8-s8-IfZ"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playlist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1zS-nn-5oL">
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Songs Removed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZv-6b-fpS">
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </view>
+                                    <constraints>
+                                        <constraint firstItem="1ts-cX-5PG" firstAttribute="leading" secondItem="KZv-6b-fpS" secondAttribute="trailing" constant="4" id="5nl-si-mpG"/>
+                                        <constraint firstItem="1zS-nn-5oL" firstAttribute="top" secondItem="1ts-cX-5PG" secondAttribute="top" id="6Rr-T9-83s"/>
+                                        <constraint firstItem="KZv-6b-fpS" firstAttribute="leading" secondItem="1zS-nn-5oL" secondAttribute="leading" id="Hf1-Cp-hK8"/>
+                                        <constraint firstItem="1zS-nn-5oL" firstAttribute="leading" secondItem="lLB-JT-eO5" secondAttribute="leadingMargin" constant="-8" id="POa-gm-PDq"/>
+                                        <constraint firstItem="6m4-F0-6ax" firstAttribute="top" secondItem="lLB-JT-eO5" secondAttribute="topMargin" constant="-8" id="ctx-ze-aoF"/>
+                                        <constraint firstItem="6m4-F0-6ax" firstAttribute="centerX" secondItem="lLB-JT-eO5" secondAttribute="centerX" id="cuB-a6-NYd"/>
+                                        <constraint firstItem="6m4-F0-6ax" firstAttribute="width" secondItem="lLB-JT-eO5" secondAttribute="width" id="d1C-jR-ubg"/>
+                                        <constraint firstItem="1ts-cX-5PG" firstAttribute="top" secondItem="6m4-F0-6ax" secondAttribute="bottom" constant="3" id="jgm-u8-klI"/>
+                                        <constraint firstItem="1ts-cX-5PG" firstAttribute="leading" secondItem="1zS-nn-5oL" secondAttribute="trailing" constant="4" id="jwt-xU-je9"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1ts-cX-5PG" secondAttribute="bottom" constant="-6" id="reL-4I-CQB"/>
+                                        <constraint firstItem="KZv-6b-fpS" firstAttribute="top" secondItem="1zS-nn-5oL" secondAttribute="bottom" constant="1" id="tIL-Pp-bH6"/>
+                                        <constraint firstItem="1ts-cX-5PG" firstAttribute="trailing" secondItem="6m4-F0-6ax" secondAttribute="trailing" constant="-3" id="u0n-EK-9Ly"/>
+                                    </constraints>
+                                    <size key="customSize" width="160" height="200"/>
+                                    <connections>
+                                        <outlet property="collaborator" destination="1ts-cX-5PG" id="exK-q8-OOj"/>
+                                        <outlet property="descriptionLabel" destination="KZv-6b-fpS" id="HkK-MN-KpM"/>
+                                        <outlet property="playlistCoverArtwork" destination="6m4-F0-6ax" id="byu-Xd-LcG"/>
+                                        <outlet property="titleLabel" destination="1zS-nn-5oL" id="NQi-57-ABC"/>
+                                    </connections>
+                                </collectionViewCell>
+                            </cells>
+                        </collectionView>
                         <sections>
                             <tableViewSection headerTitle="Collaborate" id="Mpk-Ua-Gt7">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A33-Ji-188" style="IBUITableViewCellStyleDefault" id="IEx-wN-Z3K">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IEx-wN-Z3K" id="hYu-pc-bHi">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Playlists" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A33-Ji-188">
-                                                    <frame key="frameInset" minX="25" width="315" height="59.5"/>
+                                                    <frame key="frameInset" minX="25" width="315" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -37,14 +103,14 @@
                                         <inset key="separatorInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="FOf-Iy-Nq4" style="IBUITableViewCellStyleDefault" id="yKA-cA-ysb">
-                                        <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="116" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yKA-cA-ysb" id="Ijd-w6-e4U">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shared with Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FOf-Iy-Nq4">
-                                                    <frame key="frameInset" minX="25" width="315" height="59.5"/>
+                                                    <frame key="frameInset" minX="25" width="315" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -55,14 +121,14 @@
                                         <inset key="separatorInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="9hC-IG-9Mw" style="IBUITableViewCellStyleDefault" id="dyu-kd-W35">
-                                        <rect key="frame" x="0.0" y="175.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="176" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dyu-kd-W35" id="azw-oW-Ol5">
-                                            <frame key="frameInset" width="342" height="59.5"/>
+                                            <frame key="frameInset" width="342" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Create New Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9hC-IG-9Mw">
-                                                    <frame key="frameInset" minX="25" width="315" height="59.5"/>
+                                                    <frame key="frameInset" minX="25" width="315" height="59"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -83,10 +149,17 @@
                             <outlet property="delegate" destination="ZSk-qc-mck" id="OBj-Nm-PFA"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="recentlyUpdatedCollectionView" destination="0gH-ns-X6n" id="rka-VK-qFR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVt-Ic-JLD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1040.8" y="156.97151424287858"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="art" width="300" height="300"/>
+        <image name="jpark" width="80" height="80"/>
+    </resources>
 </document>
